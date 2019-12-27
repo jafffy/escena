@@ -1,42 +1,81 @@
-#include <stdio.h>
+#include <cstdio>
+#include <cerrno>
+
+#include <unistd.h>
 
 #include <GL/glew.h>
-#include <GLFW/glfw3.h>
+
+#include "GLFWapp.h"
+
+#include "utils/shader.h"
+
+using namespace std;
 
 static class {
 public:
-	const char* title = "Sample 01";
-	int width = 800;
-	int height = 600;
-} window_context;
+    const char *title = "Sample 01";
+    int width = 800;
+    int height = 600;
 
-int main()
-{
-	GLFWwindow* window = nullptr;
+    GLuint program_id = 0;
 
-	if (!glfwInit())
-		return -1;
+    GLuint vao = 0;
+    GLuint vbo = 0;
+} app_context;
 
-	window = glfwCreateWindow(window_context.width, window_context.height,
-							  window_context.title, nullptr, nullptr);
-	if (!window) {
-		glfwTerminate();
-		return -1;
-	}
+void on_create() {
+    app_context.program_id = create_program("./simple.vert", "./simple.frag");
 
-	glfwMakeContextCurrent(window);
+    glGenVertexArrays(1, &app_context.vao);
+    glBindVertexArray(app_context.vao);
 
-	glewInit();
+    static const float vertex_buffer_data[] = {
+            -1.0f, -1.0f, 0.0f,
+            1.0f, -1.0f, 0.0f,
+            0.0f, 1.0f, 0.0f,
+    };
 
-	glClearColor(0, 0, 0.3f, 0);
-	while (!glfwWindowShouldClose(window)) {
-		glClear(GL_COLOR_BUFFER_BIT);
+    glGenBuffers(1, &app_context.vbo);
+    glBindBuffer(GL_ARRAY_BUFFER, app_context.vbo);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertex_buffer_data), vertex_buffer_data, GL_STATIC_DRAW);
 
-		glfwSwapBuffers(window);
-		glfwPollEvents();
-	}
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void *) nullptr);
+    glDisableVertexAttribArray(0);
 
-	glfwTerminate();
+    glBindVertexArray(0);
+}
 
-	return 0;
+void on_destroy() {
+    glDeleteProgram(app_context.program_id);
+
+    glDeleteBuffers(1, &app_context.vbo);
+    glDeleteVertexArrays(1, &app_context.vao);
+}
+
+void on_update(double) {
+}
+
+void on_render() {
+    GLuint color_buffer_bit = GL_COLOR_BUFFER_BIT;
+    GLuint depth_buffer_bit = GL_DEPTH_BUFFER_BIT;
+    glClear(color_buffer_bit | depth_buffer_bit);
+
+    glUseProgram(app_context.program_id);
+
+    glBindVertexArray(app_context.vao);
+    glEnableVertexAttribArray(0);
+
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+
+    glDisableVertexAttribArray(0);
+    glBindVertexArray(0);
+
+    glUseProgram(0);
+}
+
+int main() {
+    GLFWapp(app_context.width, app_context.height, app_context.title);
+
+    return 0;
 }

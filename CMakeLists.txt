@@ -1,13 +1,15 @@
 cmake_minimum_required (VERSION 3.0)
 project (escena)
 
+set(OpenGL_GL_PREFERENCE GLVND)
+
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(GLEW REQUIRED)
 
 set(FRAMEWORK_SRCS
-	"lib/scene_node.cc"
-)
+		"lib/scene_node.cc"
+		include/renderer.h lib/GLFWapp.cpp include/GLFWapp.h include/utils/shader.h lib/utils/shader.cpp)
 
 set(ALL_LIBS
 	${OPENGL_LIBRARY}
@@ -33,13 +35,18 @@ link_directories(
 )
 
 add_compile_options(
-	"-std=c++14"
-	"-O2"
+		"-std=c++14"
+		"-O2"
 )
 add_executable(sample01
-	samples/sample01.cc
-	${FRAMEWORK_SRCS}
-)
+		samples/sample01.cc
+		${FRAMEWORK_SRCS}
+		)
 target_link_libraries(sample01
-	${ALL_LIBS}
-)
+		${ALL_LIBS}
+		)
+
+add_executable(sample02
+		${FRAMEWORK_SRCS} samples/sample02.cc)
+target_link_libraries(sample02
+		${ALL_LIBS})
