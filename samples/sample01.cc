@@ -5,6 +5,13 @@
 
 #include <GL/glew.h>
 
+#include <glm/glm.hpp>
+
+#define GLM_ENABLE_EXPERIMENTAL
+
+#include <glm/gtx/transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include "GLFWapp.h"
 
 #include "utils/shader.h"
@@ -18,13 +25,16 @@ public:
     int height = 600;
 
     GLuint program_id = 0;
+    GLuint MVP_id = 0;
 
     GLuint vao = 0;
     GLuint vbo = 0;
+
+    glm::mat4 MVP = glm::mat4(1.0f);
 } app_context;
 
 void on_create() {
-    app_context.program_id = create_program("./simple.vert", "./simple.frag");
+    app_context.program_id = create_program("./transform.vert", "./simple.frag");
 
     glGenVertexArrays(1, &app_context.vao);
     glBindVertexArray(app_context.vao);
@@ -43,6 +53,8 @@ void on_create() {
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void *) nullptr);
     glDisableVertexAttribArray(0);
 
+    app_context.MVP_id = glGetUniformLocation(app_context.program_id, "MVP");
+
     glBindVertexArray(0);
 }
 
@@ -54,6 +66,14 @@ void on_destroy() {
 }
 
 void on_update(double) {
+    glm::mat4 M = glm::mat4(1.0f);
+    glm::mat4 V = glm::lookAt(glm::vec3(0, 5, -5),
+                              glm::vec3(0, 0, 0), glm::vec3(0, 1, 0));
+    glm::mat4 P = glm::perspective(glm::pi<float>() / 4,
+                                   (float) (app_context.width) / (float) (app_context.height),
+                                   0.1f, 100.0f);
+
+    app_context.MVP = P * V * M;
 }
 
 void on_render() {
@@ -62,6 +82,8 @@ void on_render() {
     glClear(color_buffer_bit | depth_buffer_bit);
 
     glUseProgram(app_context.program_id);
+
+    glUniformMatrix4fv(app_context.MVP_id, 1, GL_FALSE, glm::value_ptr(app_context.MVP));
 
     glBindVertexArray(app_context.vao);
     glEnableVertexAttribArray(0);
