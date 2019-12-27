@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="escena"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/jafffy/workspace/escena/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/jafffy/workspace/escena/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/jafffy/workspace/escena/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample01">
+				<Option output="/home/jafffy/workspace/escena/cmake-build-debug/sample01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jafffy/workspace/escena/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTW_STATIC"/>
+					<Add option="-DTW_NO_LIB_PRAGMA"/>
+					<Add option="-DTW_NO_DIRECT3D"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/jafffy/workspace/escena/./include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 sample01"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample01/fast">
+				<Option output="/home/jafffy/workspace/escena/cmake-build-debug/sample01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jafffy/workspace/escena/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTW_STATIC"/>
+					<Add option="-DTW_NO_LIB_PRAGMA"/>
+					<Add option="-DTW_NO_DIRECT3D"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/jafffy/workspace/escena/./include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 sample01/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample02">
+				<Option output="/home/jafffy/workspace/escena/cmake-build-debug/sample02" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jafffy/workspace/escena/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTW_STATIC"/>
+					<Add option="-DTW_NO_LIB_PRAGMA"/>
+					<Add option="-DTW_NO_DIRECT3D"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/jafffy/workspace/escena/./include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 sample02"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sample02/fast">
+				<Option output="/home/jafffy/workspace/escena/cmake-build-debug/sample02" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jafffy/workspace/escena/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTW_STATIC"/>
+					<Add option="-DTW_NO_LIB_PRAGMA"/>
+					<Add option="-DTW_NO_DIRECT3D"/>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/jafffy/workspace/escena/./include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 sample02/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/jafffy/workspace/escena/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/jafffy/workspace/escena/include/GLFWapp.h">
+			<Option target="sample01"/>
+			<Option target="sample02"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/include/renderer.h">
+			<Option target="sample01"/>
+			<Option target="sample02"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/include/utils/shader.h">
+			<Option target="sample01"/>
+			<Option target="sample02"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/lib/GLFWapp.cpp">
+			<Option target="sample01"/>
+			<Option target="sample02"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/lib/scene_node.cc">
+			<Option target="sample01"/>
+			<Option target="sample02"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/lib/utils/shader.cpp">
+			<Option target="sample01"/>
+			<Option target="sample02"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/samples/sample01.cc">
+			<Option target="sample01"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/samples/sample02.cc">
+			<Option target="sample02"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Targets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/jafffy/workspace/escena/../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

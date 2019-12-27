@@ -1,0 +1,4 @@
+/home/jafffy/workspace/escena/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/jafffy/workspace/escena/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jafffy/workspace/escena/cmake-build-debug/CMakeFiles/sample01.dir
+/home/jafffy/workspace/escena/cmake-build-debug/CMakeFiles/sample02.dir

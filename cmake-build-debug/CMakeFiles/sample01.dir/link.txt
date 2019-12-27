@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/sample01.dir/samples/sample01.cc.o CMakeFiles/sample01.dir/lib/scene_node.cc.o CMakeFiles/sample01.dir/lib/GLFWapp.cpp.o CMakeFiles/sample01.dir/lib/utils/shader.cpp.o  -o sample01  -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lOpenGL -lGLX -lGLU /usr/lib/x86_64-linux-gnu/libglfw.so.3.2 -lGLEW 
